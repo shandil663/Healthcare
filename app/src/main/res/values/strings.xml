@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Healthcare</string>
+    <string name="hos">Select Hospital</string>
+    <string name="doc">Select Doctor</string>
+    <string name="time">Select time slot</string>
+</resources>
