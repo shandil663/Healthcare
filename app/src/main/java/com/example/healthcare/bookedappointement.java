@@ -47,7 +47,7 @@ public class bookedappointement extends AppCompatActivity {
             }
         });
         uidauth=FirebaseAuth.getInstance();
-        Toast.makeText(bookedappointement.this, "Loading Data, Please wait", Toast.LENGTH_LONG).show();
+//        Toast.makeText(bookedappointement.this, "Loading Data, Please wait", Toast.LENGTH_LONG).show();
 
         readata(uidauth.getCurrentUser().getUid());
 
@@ -77,7 +77,7 @@ public class bookedappointement extends AppCompatActivity {
 
                 if(task.isSuccessful()){
 if(task.getResult().exists()){
-    Toast.makeText(bookedappointement.this, "Data Loaded Successfully", Toast.LENGTH_LONG).show();
+
 
     DataSnapshot data= task.getResult();
     String patname= String.valueOf(data.child("name").getValue());
