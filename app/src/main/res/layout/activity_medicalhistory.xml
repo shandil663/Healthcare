@@ -200,8 +200,9 @@
                     android:id="@+id/imageView"
                     android:layout_width="50dp"
                     android:layout_height="50dp"
+                    android:layout_marginBottom="5sp"
                     android:layout_gravity="bottom|center_horizontal"
-                    app:srcCompat="@drawable/img"
+                    app:srcCompat="@drawable/img_27"
 
                     />
             </androidx.cardview.widget.CardView>
@@ -232,11 +233,11 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="45dp"
-                    android:layout_height="45dp"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="5dp"
-                    app:srcCompat="@drawable/img_1" />
+                    app:srcCompat="@drawable/img_28" />
             </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -266,8 +267,9 @@
                 android:id="@+id/medicaldet1"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginBottom="5sp"
                 android:layout_gravity="bottom|center_horizontal"
-                app:srcCompat="@drawable/img"
+                app:srcCompat="@drawable/img_29"
 
                 />
         </androidx.cardview.widget.CardView>
@@ -300,11 +302,11 @@
 
             <ImageView
                 android:id="@+id/imagedetail1"
-                android:layout_width="45dp"
-                android:layout_height="45dp"
+                android:layout_width="55dp"
+                android:layout_height="55dp"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginBottom="5dp"
-                app:srcCompat="@drawable/img_1" />
+                app:srcCompat="@drawable/img_30" />
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
@@ -334,8 +336,9 @@
                 android:id="@+id/medicaldet"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
+                android:layout_marginBottom="5sp"
                 android:layout_gravity="bottom|center_horizontal"
-                app:srcCompat="@drawable/img"
+                app:srcCompat="@drawable/img_31"
 
                 />
         </androidx.cardview.widget.CardView>
@@ -372,7 +375,7 @@
                 android:layout_height="45dp"
                 android:layout_gravity="bottom|center_horizontal"
                 android:layout_marginBottom="5dp"
-                app:srcCompat="@drawable/img_1" />
+                app:srcCompat="@drawable/img_32" />
         </androidx.cardview.widget.CardView>
 
 

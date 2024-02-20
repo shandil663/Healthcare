@@ -7,6 +7,7 @@ import androidx.cardview.widget.CardView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,8 +21,9 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
-CardView card,viewappoint,meddata;
+CardView card,viewappoint,meddata,nfctag,emertag,buymed;
 TextView txt;
+ImageView img;
 
 FirebaseAuth ooth;
 DatabaseReference refy;
@@ -30,10 +32,43 @@ DatabaseReference refy;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        nfctag=findViewById(R.id.nfctag);
+        emertag=findViewById(R.id.emertag);
+
+        buymed=findViewById(R.id.buymed);
+        buymed.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, Buydrugs.class));
+            }
+        });
+        img=findViewById(R.id.menunormal);
+        img.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                img.setImageResource(R.drawable.openmenu);
+                startActivity(new Intent(MainActivity.this, settings.class));
+            }
+        });
+        nfctag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,NFC.class));
+            }
+        });
+
+        emertag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,Emergency.class));
+            }
+        });
+
+
 
         ooth=FirebaseAuth.getInstance();
         viewappoint=findViewById(R.id.viewappointid);
-        txt=findViewById(R.id.templogout);
+
         card=findViewById(R.id.booking);
         meddata=findViewById(R.id.showmedicaldata);
 
@@ -71,13 +106,7 @@ DatabaseReference refy;
 
         });
 
-        txt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent logout=new Intent(getApplicationContext(), settings.class);
-                startActivity(logout);
-            }
-        });
+
 
         card.setOnClickListener(new View.OnClickListener() {
             @Override

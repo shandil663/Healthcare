@@ -1,7 +1,9 @@
 package com.example.healthcare;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
+import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
@@ -26,8 +28,10 @@ public class MyAdpater extends RecyclerView.Adapter<MyViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
+
 holder.title.setText(items.get(position).getTitle());
 holder.time.setText(items.get(position).getTime());
+
     }
 
     @Override

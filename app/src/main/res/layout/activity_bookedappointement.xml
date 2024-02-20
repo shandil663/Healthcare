@@ -343,7 +343,7 @@
             android:id="@+id/imageView8"
             android:layout_width="170sp"
             android:layout_height="170sp"
-            app:srcCompat="@drawable/img_13"
+            app:srcCompat="@drawable/img_33"
             android:layout_gravity="center_horizontal|bottom"
             android:layout_marginBottom="50dp"/>
 

@@ -37,8 +37,8 @@ public class appointmentbooking extends AppCompatActivity {
     DatabaseReference ref;
 
     String HOSNAME,DOCNAME,ILL,TIME,NAME,AGE;
- String[] items={"Government hospital1","Government hospital2","Government hospital3","Government hospital4","Government hospital5","Government hospital6","Government hospital7",};
-    String[] items1={"Dr. Gaurav Taneja","Dr. Rudra Verma","Dr. Bhomik","Dr. Sahil Shandil","Dr. Ayushi Agarwal","Dr. Tanisha","Dr. Akshat",};
+ String[] items={"Distt. Hospital, Amritsar", "SDH, Ajnala", "SDH, Baba Bakala", "CHC Lopoke", "CHC Manawala", "CHC Tarsikka", "CHC Majitha", "Community Health Centre, Bhadaur", "Community Health Centre, Dhanaula", "Community Health Centre, Tapa", "District Hospital, Barnala", "Women & Child Hospital, Bathinda", "Sub Divisional Hospital, Talwandi Sabo", "Community Health Centre, Sangat", "Community Health Centre, Nathana", "Community Health Centre, Maur Mandi", "Community Health Centre, Bhucho Mandi", "Community Health Centre, Mehraj", "Community Health Centre, Bhagat", "Sub Divisional Hospital Ram Pura Phul","Community Health Centre, Bhatinda", "Community Health Centre, Nathana", "Community Health Centre, Maur Mandi", "Community Health Centre, Bhucho Mandi", "Community Health Centre, Mehraj", "Community Health Centre, Bhagat", "Sub Divisional Hospital, Rampura Phul", "SDH, Bariwala", "SDH, Malout", "CHC, Lambi", "CHC, Gidderbaha", "SDH, Fazilka", "SDH, Abohar", "Civil Hospital, Muktsar", "SDH, Gurusar Sadhar", "SDH, Jagraon", "CHC, Raikot", "SDH, Moga", "SDH, Nihal Singh Wala", "CHC, Dharamkot",};
+    String[] items1={"Dr. Rajesh Sharma", "Dr. Priya Patel", "Dr. Alok Kumar", "Dr. Nandini Singh", "Dr. Vikram Desai", "Dr. Anjali Gupta", "Dr. Arjun Reddy", "Dr. Meera Khanna", "Dr. Sanjay Joshi", "Dr. Pooja Verma", "Dr. Ravi Menon", "Dr. Naina Kapoor", "Dr. Rohit Singhania", "Dr. Kavita Rastogi", "Dr. Anil Agarwal", "Dr. Ananya Das", "Dr. Sameer Malhotra", "Dr. Sneha Choudhury", "Dr. Suresh Iyer", "Dr. Nisha Sharma", "Dr. Prakash Kapoor", "Dr. Ayesha Pandey", "Dr. Arvind Rajput", "Dr. Deepika Rao", "Dr. Raghav Mehta", "Dr. Shalini Gupta", "Dr. Rahul Verma", "Dr. Kiran Nair", "Dr. Shashi Joshi", "Dr. Neelam Malhotra", "Dr. Aditya Chauhan", "Dr. Simran Ahuja", "Dr. Vikas Kapoor", "Dr. Diya Reddy", "Dr. Abhishek Patel", "Dr. Preeti Sharma", "Dr. Rajat Khanna", "Dr. Karishma Kumar", "Dr. Ajay Singh", "Dr. Anushka Bhatia",};
     String[] items2={"9:00am to 10:00am","10:00am to 11:00am","11:00am to 12:00pm","1:00pm to 2:00pm","2:00pm to 3:00pm"};
  AutoCompleteTextView autoCompleteTxt,autoCompleteTxt1,autoCompleteTxt2;
  ArrayAdapter<String> adapterItems;
@@ -87,7 +87,7 @@ public class appointmentbooking extends AppCompatActivity {
                         }
                     });
 
-                    Toast.makeText(appointmentbooking.this, "Appointment booked", Toast.LENGTH_SHORT).show();
+//                    Toast.makeText(appointmentbooking.this, "Appointment booked", Toast.LENGTH_SHORT).show();
                     Intent booked=new Intent(getApplicationContext(), bookedappointement.class);
 //                    booked.putExtra("hosname",HOSNAME);
 //                    booked.putExtra("docname",DOCNAME);
