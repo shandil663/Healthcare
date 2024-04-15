@@ -42,6 +42,7 @@
             android:src="@drawable/backbutton" />
     </androidx.cardview.widget.CardView>
 
+
     <androidx.cardview.widget.CardView
         android:layout_width="250sp"
         android:layout_height="100sp"
@@ -50,7 +51,7 @@
         app:cardElevation="5sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintHorizontal_bias="0.869"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.089">
@@ -127,10 +128,9 @@
 
     </androidx.cardview.widget.CardView>
 
-
     <androidx.cardview.widget.CardView
-        android:layout_width="105sp"
-        android:layout_height="100sp"
+        android:layout_width="115sp"
+        android:layout_height="110sp"
         android:backgroundTint="@color/cardback"
         app:cardCornerRadius="50sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -142,33 +142,33 @@
 
         <ImageView
             android:id="@+id/imageView6"
-            android:layout_width="90dp"
-            android:layout_height="90dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_gravity="center_horizontal"
             app:srcCompat="@drawable/img_6" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
-        android:layout_width="370sp"
+        android:layout_width="410sp"
         android:layout_height="600sp"
-        app:cardCornerRadius="20sp"
         android:layout_marginStart="10sp"
         android:layout_marginEnd="10sp"
+        app:cardCornerRadius="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.476"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945" >
+        app:layout_constraintVertical_bias="0.742">
 
         <androidx.cardview.widget.CardView
-            android:layout_width="350sp"
+            android:layout_width="390sp"
             android:layout_height="170sp"
-            app:cardCornerRadius="20sp"
-            app:cardElevation="5sp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="10sp"
-            >
+            app:cardCornerRadius="20sp"
+            app:cardElevation="5sp">
+
             <View
                 android:layout_width="300sp"
                 android:layout_height="1dp"
@@ -182,82 +182,84 @@
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="98sp"
                 android:background="@android:color/darker_gray" />
+
             <View
                 android:layout_width="300sp"
                 android:layout_height="1dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="155sp"
                 android:background="@android:color/darker_gray" />
+
             <TextView
                 android:id="@+id/textView10"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Appointed Doctor:"
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="10sp"
-                android:textSize="20sp"
-                />
+                android:text="Appointed Doctor:"
+                android:textSize="20sp" />
+
             <TextView
                 android:id="@+id/docnameid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Dr.Bhomik"
-                android:textStyle="bold"
-                android:textColor="@color/black"
                 android:layout_marginStart="200sp"
                 android:layout_marginTop="10sp"
+                android:text="Dr.Bhomik"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                />
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/textView11"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Doctor Id:"
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="68sp"
-                android:textSize="20sp"
-                />
+                android:text="Doctor Id:"
+                android:textSize="20sp" />
+
             <TextView
                 android:id="@+id/textView15"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="105sp"
+                android:layout_marginTop="68sp"
                 android:text="E45uD"
                 android:textColor="@color/black"
-                android:textStyle="bold"
-                android:layout_marginStart="200sp"
-                android:layout_marginTop="68sp"
                 android:textSize="20sp"
-                />
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/textView12"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Speciality:"
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="125sp"
-                android:textSize="20sp"
-                />
+                android:text="Speciality:"
+                android:textSize="20sp" />
+
             <TextView
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Cardiologist"
-                android:layout_marginStart="200sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
+                android:layout_marginStart="110sp"
                 android:layout_marginTop="125sp"
+                android:text="Cardiologist"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                />
+                android:textStyle="bold" />
 
         </androidx.cardview.widget.CardView>
 
         <androidx.cardview.widget.CardView
-            android:layout_width="350sp"
+            android:layout_width="390sp"
             android:layout_height="170sp"
-            app:cardCornerRadius="20sp"
-            app:cardElevation="5sp"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="200sp" >
+            android:layout_marginTop="200sp"
+            app:cardCornerRadius="20sp"
+            app:cardElevation="5sp">
+
             <View
                 android:layout_width="300sp"
                 android:layout_height="1dp"
@@ -271,94 +273,94 @@
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="98sp"
                 android:background="@android:color/darker_gray" />
+
             <View
                 android:layout_width="300sp"
                 android:layout_height="1dp"
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="155sp"
                 android:background="@android:color/darker_gray" />
+
             <TextView
                 android:id="@+id/textdomain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Domain:"
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="10sp"
-                android:textSize="20sp"
-                />
+                android:text="Domain:"
+                android:textSize="20sp" />
+
             <TextView
                 android:id="@+id/illnessdomain"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Severe heart problem"
-                android:textStyle="bold"
-                android:textColor="@color/black"
                 android:layout_marginStart="120sp"
                 android:layout_marginTop="10sp"
+                android:text="Severe heart problem"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                />
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/texttime"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Time Slot:"
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="68sp"
-                android:textSize="20sp"
-                />
+                android:text="Time Slot:"
+                android:textSize="20sp" />
+
             <TextView
                 android:id="@+id/textslotid"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="11am to 12pm"
-                android:textColor="@color/black"
-                android:textStyle="bold"
                 android:layout_marginStart="120sp"
                 android:layout_marginTop="68sp"
+                android:text="11am to 12pm"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                />
+                android:textStyle="bold" />
+
             <TextView
                 android:id="@+id/textroom"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Room Alloted:"
                 android:layout_marginStart="10sp"
                 android:layout_marginTop="125sp"
-                android:textSize="20sp"
-                />
+                android:text="Room Alloted:"
+                android:textSize="20sp" />
+
             <TextView
                 android:id="@+id/textalot"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="201/Level 2"
                 android:layout_marginStart="150sp"
-                android:textStyle="bold"
-                android:textColor="@color/black"
                 android:layout_marginTop="125sp"
+                android:text="201/Level 2"
+                android:textColor="@color/black"
                 android:textSize="20sp"
-                />
+                android:textStyle="bold" />
         </androidx.cardview.widget.CardView>
 
         <ImageView
             android:id="@+id/imageView8"
             android:layout_width="170sp"
             android:layout_height="170sp"
-            app:srcCompat="@drawable/img_33"
             android:layout_gravity="center_horizontal|bottom"
-            android:layout_marginBottom="50dp"/>
+            android:layout_marginBottom="50dp"
+            app:srcCompat="@drawable/img_33" />
 
         <TextView
             android:id="@+id/textView17"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
+            android:layout_marginBottom="20sp"
             android:text="Scan to access appointment details"
             android:textAlignment="center"
-            android:layout_marginBottom="20sp"
-            android:textStyle="bold"
-            android:textSize="20sp"
             android:textColor="@color/text"
-            />
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
 
     </androidx.cardview.widget.CardView>

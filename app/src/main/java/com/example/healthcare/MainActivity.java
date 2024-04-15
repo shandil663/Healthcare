@@ -21,7 +21,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 public class MainActivity extends AppCompatActivity {
-CardView card,viewappoint,meddata,nfctag,emertag,buymed;
+CardView card,viewappoint,meddata,nfctag,emertag,buymed,blood;
 TextView txt;
 ImageView img;
 
@@ -34,7 +34,13 @@ DatabaseReference refy;
         setContentView(R.layout.activity_main);
         nfctag=findViewById(R.id.nfctag);
         emertag=findViewById(R.id.emertag);
-
+blood=findViewById(R.id.bloodcheck);
+blood.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        startActivity(new Intent(getApplicationContext(), Blood.class));
+    }
+});
         buymed=findViewById(R.id.buymed);
         buymed.setOnClickListener(new View.OnClickListener() {
             @Override

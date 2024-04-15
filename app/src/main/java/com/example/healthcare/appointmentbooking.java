@@ -3,17 +3,24 @@ package com.example.healthcare;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
-
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.PopupWindow;
 import android.widget.Toast;
 
+import com.airbnb.lottie.LottieAnimationView;
 import com.example.healthcare.databinding.ActivityMainBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -24,8 +31,12 @@ import com.google.firebase.database.FirebaseDatabase;
 public class appointmentbooking extends AppCompatActivity {
 
 
-    Button btn;
-      CardView card;
+    Button btn,selectdoc;
+
+    CheckBox checkBox;
+
+    LottieAnimationView lottieAnimationView1,lottieAnimationView2;
+      CardView card,card1;
 
 
     EditText edit1,edit2,edit3;
@@ -40,13 +51,21 @@ public class appointmentbooking extends AppCompatActivity {
  String[] items={"Distt. Hospital, Amritsar", "SDH, Ajnala", "SDH, Baba Bakala", "CHC Lopoke", "CHC Manawala", "CHC Tarsikka", "CHC Majitha", "Community Health Centre, Bhadaur", "Community Health Centre, Dhanaula", "Community Health Centre, Tapa", "District Hospital, Barnala", "Women & Child Hospital, Bathinda", "Sub Divisional Hospital, Talwandi Sabo", "Community Health Centre, Sangat", "Community Health Centre, Nathana", "Community Health Centre, Maur Mandi", "Community Health Centre, Bhucho Mandi", "Community Health Centre, Mehraj", "Community Health Centre, Bhagat", "Sub Divisional Hospital Ram Pura Phul","Community Health Centre, Bhatinda", "Community Health Centre, Nathana", "Community Health Centre, Maur Mandi", "Community Health Centre, Bhucho Mandi", "Community Health Centre, Mehraj", "Community Health Centre, Bhagat", "Sub Divisional Hospital, Rampura Phul", "SDH, Bariwala", "SDH, Malout", "CHC, Lambi", "CHC, Gidderbaha", "SDH, Fazilka", "SDH, Abohar", "Civil Hospital, Muktsar", "SDH, Gurusar Sadhar", "SDH, Jagraon", "CHC, Raikot", "SDH, Moga", "SDH, Nihal Singh Wala", "CHC, Dharamkot",};
     String[] items1={"Dr. Rajesh Sharma", "Dr. Priya Patel", "Dr. Alok Kumar", "Dr. Nandini Singh", "Dr. Vikram Desai", "Dr. Anjali Gupta", "Dr. Arjun Reddy", "Dr. Meera Khanna", "Dr. Sanjay Joshi", "Dr. Pooja Verma", "Dr. Ravi Menon", "Dr. Naina Kapoor", "Dr. Rohit Singhania", "Dr. Kavita Rastogi", "Dr. Anil Agarwal", "Dr. Ananya Das", "Dr. Sameer Malhotra", "Dr. Sneha Choudhury", "Dr. Suresh Iyer", "Dr. Nisha Sharma", "Dr. Prakash Kapoor", "Dr. Ayesha Pandey", "Dr. Arvind Rajput", "Dr. Deepika Rao", "Dr. Raghav Mehta", "Dr. Shalini Gupta", "Dr. Rahul Verma", "Dr. Kiran Nair", "Dr. Shashi Joshi", "Dr. Neelam Malhotra", "Dr. Aditya Chauhan", "Dr. Simran Ahuja", "Dr. Vikas Kapoor", "Dr. Diya Reddy", "Dr. Abhishek Patel", "Dr. Preeti Sharma", "Dr. Rajat Khanna", "Dr. Karishma Kumar", "Dr. Ajay Singh", "Dr. Anushka Bhatia",};
     String[] items2={"9:00am to 10:00am","10:00am to 11:00am","11:00am to 12:00pm","1:00pm to 2:00pm","2:00pm to 3:00pm"};
+
+    String[] fever={"Dr. Rakshul","Dr. Bhomik","Dr. Ankita Sharma"};
+
+    String [] body={"Dr. Anil Agarwal", "Dr. Ananya Das", "Dr. Sameer Malhotra", "Dr. Sneha"};
  AutoCompleteTextView autoCompleteTxt,autoCompleteTxt1,autoCompleteTxt2;
  ArrayAdapter<String> adapterItems;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_appointmentbooking);
-
+        selectdoc=findViewById(R.id.selectdoc);
+        card1=findViewById(R.id.card1);
+        checkBox=findViewById(R.id.checkBox);
+        lottieAnimationView1=findViewById(R.id.animationView1);
+        lottieAnimationView2=findViewById(R.id.applod);
         card=findViewById(R.id.cardbackfromappoint);
         btn=findViewById(R.id.appoint);
         autoCompleteTxt=findViewById(R.id.auto_complete_txt);
@@ -56,6 +75,55 @@ public class appointmentbooking extends AppCompatActivity {
         edit2=findViewById(R.id.editTextText1);
         edit3=findViewById(R.id.editTextText3);
         oth=FirebaseAuth.getInstance();
+
+        checkBox.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showPopupWindow(view);
+                checkBox.setTextColor(Color.RED);
+            }
+        });
+
+        selectdoc.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(!edit1.getText().toString().isEmpty()){
+                lottieAnimationView1.setVisibility(View.GONE);
+                card1.setVisibility(View.GONE);
+                lottieAnimationView2.setVisibility(View.VISIBLE);
+
+                Handler handler=new Handler();
+                Runnable runnable=new Runnable() {
+                    @Override
+                    public void run() {
+                        lottieAnimationView1.setVisibility(View.VISIBLE);
+                        card1.setVisibility(View.VISIBLE);
+                        lottieAnimationView2.setVisibility(View.GONE);
+                        if(edit1.getText().toString().equals("Fever")){
+                            adapterItems=new ArrayAdapter<String>(appointmentbooking.this,R.layout.list_item,fever);
+                            autoCompleteTxt1.setAdapter(adapterItems);
+                            autoCompleteTxt1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    String item =adapterView.getItemAtPosition(i).toString();
+                                }
+                            });
+                        }
+                        if(edit1.getText().toString().equals("Body Pain")){
+                            adapterItems=new ArrayAdapter<String>(appointmentbooking.this,R.layout.list_item,body);
+                            autoCompleteTxt1.setAdapter(adapterItems);
+                            autoCompleteTxt1.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                                @Override
+                                public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                                    String item =adapterView.getItemAtPosition(i).toString();
+                                }
+                            });
+                        }
+                    }
+                };
+                handler.postDelayed(runnable,2000);
+            }}
+        });
         card.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -76,28 +144,40 @@ public class appointmentbooking extends AppCompatActivity {
                 AGE=edit3.getText().toString();
 
                 if(!HOSNAME.isEmpty()&&!DOCNAME.isEmpty()&&!TIME.isEmpty()&&!ILL.isEmpty()&&!NAME.isEmpty()&&!AGE.isEmpty()){
+                    lottieAnimationView1.setVisibility(View.GONE);
+                    card1.setVisibility(View.GONE);
+                    lottieAnimationView2.setVisibility(View.VISIBLE);
                     Patients patients=new Patients(HOSNAME,DOCNAME,ILL,TIME,NAME,AGE);
                     db=FirebaseDatabase.getInstance();
                     ref=db.getReference("Patients").child(oth.getCurrentUser().getUid());
                     ref.setValue(patients).addOnCompleteListener(new OnCompleteListener<Void>() {
                         @Override
                         public void onComplete(@NonNull Task<Void> task) {
+                            lottieAnimationView2.setVisibility(View.GONE);
                             Toast.makeText(appointmentbooking.this, "Appointment booked", Toast.LENGTH_SHORT).show();
+
+                            Handler handler=new Handler();
+                            Runnable runnable=new Runnable() {
+                                @Override
+                                public void run() {
+                                    Intent booked=new Intent(getApplicationContext(), bookedappointement.class);
+                                    startActivity(booked);
+                                    finish();
+                                }
+                            };
+                            handler.postDelayed(runnable,2000);
 
                         }
                     });
 
 //                    Toast.makeText(appointmentbooking.this, "Appointment booked", Toast.LENGTH_SHORT).show();
-                    Intent booked=new Intent(getApplicationContext(), bookedappointement.class);
+
 //                    booked.putExtra("hosname",HOSNAME);
 //                    booked.putExtra("docname",DOCNAME);
 //                    booked.putExtra("ill",ILL);
 //                    booked.putExtra("name",NAME);
 //                    booked.putExtra("age",AGE);
 //                    booked.putExtra("time",TIME);
-                    startActivity(booked);
-                    finish();
-
                 }
 
                 else{
@@ -132,5 +212,27 @@ public class appointmentbooking extends AppCompatActivity {
             }
         });
 
+    }
+    private void showPopupWindow(View anchorView) {
+        View rootView = findViewById(android.R.id.content); // Get activity's top view
+        LayoutInflater inflater = (LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE);
+        View popupView = inflater.inflate(R.layout.popup_window_layout, null);
+        PopupWindow popupWindow = new PopupWindow(popupView,1000, 800, true);
+        popupWindow.showAtLocation(anchorView,Gravity.CENTER,0,0);
+
+        EditText editText1 = popupView.findViewById(R.id.editText1);
+        EditText editText2 = popupView.findViewById(R.id.editText2);
+        Button submitButton = popupView.findViewById(R.id.submitButton);
+
+        submitButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String text1 = editText1.getText().toString();
+                String text2 = editText2.getText().toString();
+
+                // Do something with the entered data (text1 and text2)
+                popupWindow.dismiss();
+            }
+        });
     }
 }

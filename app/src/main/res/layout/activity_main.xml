@@ -14,15 +14,16 @@
         android:src="@drawable/menunormal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.052"
+        app:layout_constraintHorizontal_bias="0.046"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.038" />
+        app:layout_constraintVertical_bias="0.046" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_bold"
         android:gravity="center_horizontal"
         android:text="Patient Dashboard"
         android:textAlignment="center"
@@ -31,13 +32,14 @@
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.034" />
+        app:layout_constraintVertical_bias="0.038" />
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="390sp"
+        android:layout_width="400dp"
         android:layout_height="300sp"
         android:elevation="40dp"
         app:cardCornerRadius="20dp"
@@ -55,9 +57,9 @@
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/booking"
-                android:layout_width="150dp"
+                android:layout_width="160dp"
                 android:layout_height="100dp"
-                android:layout_marginLeft="20sp"
+                android:layout_marginLeft="30sp"
                 android:layout_marginTop="30sp"
                 android:backgroundTint="@color/cardback"
                 app:cardCornerRadius="20sp"
@@ -65,6 +67,7 @@
 
                 <TextView
                     android:id="@+id/textView2"
+                    android:fontFamily="@font/poppins_bold"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
@@ -78,19 +81,20 @@
 
                 <ImageView
                     android:id="@+id/imageView"
-                    android:layout_width="50dp"
-                    android:layout_height="50dp"
+                    android:layout_width="40dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_height="45dp"
                     android:layout_gravity="bottom|center_horizontal"
-                    app:srcCompat="@drawable/img"
+                    app:srcCompat="@drawable/calendar"
 
                     />
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
                 android:id="@+id/viewappointid"
-                android:layout_width="150dp"
+                android:layout_width="160dp"
                 android:layout_height="100dp"
-                android:layout_marginStart="50dp"
+                android:layout_marginStart="20dp"
                 android:layout_marginTop="30sp"
                 android:layout_marginEnd="20sp"
                 android:backgroundTint="@color/cardback"
@@ -103,6 +107,7 @@
                     android:id="@+id/textView3"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:text="View Appointment"
@@ -112,11 +117,11 @@
 
                 <ImageView
                     android:id="@+id/imageView2"
-                    android:layout_width="45dp"
+                    android:layout_width="40dp"
                     android:layout_height="45dp"
                     android:layout_gravity="bottom|center_horizontal"
                     android:layout_marginBottom="5dp"
-                    app:srcCompat="@drawable/img_1" />
+                    app:srcCompat="@drawable/analysis" />
             </androidx.cardview.widget.CardView>
 
         </LinearLayout>
@@ -129,7 +134,7 @@
             <androidx.cardview.widget.CardView
                 android:id="@+id/showmedicaldata"
                 android:layout_width="350dp"
-                android:layout_height="100dp"
+                android:layout_height="130dp"
                 android:layout_margin="20dp"
                 android:layout_marginStart="50dp"
                 android:layout_marginTop="30sp"
@@ -144,8 +149,9 @@
                     android:id="@+id/textView4"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_bold"
                     android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="10dp"
                     android:text="Check your medical history"
                     android:textAlignment="center"
                     android:textSize="20sp"
@@ -155,11 +161,11 @@
 
                 <ImageView
                     android:id="@+id/imageView3"
-                    android:layout_width="100dp"
-                    android:layout_height="60dp"
+                    android:layout_width="150dp"
+                    android:layout_height="80dp"
                     android:layout_gravity="bottom|center_horizontal"
-                    android:layout_marginBottom="10sp"
-                    app:srcCompat="@drawable/img_2" />
+                    android:layout_marginBottom="5sp"
+                    app:srcCompat="@drawable/research" />
             </androidx.cardview.widget.CardView>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -178,8 +184,8 @@
 
 
     <androidx.cardview.widget.CardView
-        android:layout_width="370dp"
-        android:layout_height="170dp"
+        android:layout_width="375dp"
+        android:layout_height="201dp"
         app:cardCornerRadius="20dp"
         app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -195,6 +201,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20sp"
+            android:fontFamily="@font/med"
             android:text="Tip of the day"
             android:textAlignment="center"
             android:textSize="15sp" />
@@ -204,7 +211,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
-            android:layout_marginBottom="45sp"
+            android:layout_marginBottom="20sp"
+            android:fontFamily="@font/poppins_bold"
             android:padding="10sp"
             android:text="You can also search for doctors and check availability of hospital near you."
             android:textAlignment="center"
@@ -224,7 +232,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.049">
+        app:layout_constraintVertical_bias="0.019">
 
         <ImageView
             android:id="@+id/imageView12"
@@ -248,7 +256,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.037">
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/nf"
@@ -272,7 +280,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157">
+        app:layout_constraintVertical_bias="0.108">
 
         <ImageView
             android:id="@+id/med"
@@ -281,6 +289,30 @@
             android:layout_gravity="center"
             android:layout_margin="10sp"
             android:src="@drawable/img_34" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/bloodcheck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100sp"
+        android:layout_marginEnd="10sp"
+        app:cardCornerRadius="50sp"
+        app:cardElevation="5sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.214">
+
+        <ImageView
+            android:id="@+id/blood1"
+            android:layout_width="45sp"
+            android:layout_height="45sp"
+            android:layout_gravity="center"
+            android:layout_margin="10sp"
+            android:src="@drawable/img_38" />
     </androidx.cardview.widget.CardView>
 
 
