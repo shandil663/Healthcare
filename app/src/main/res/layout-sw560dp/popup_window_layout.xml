@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="390dp"
+    android:layout_height="500dp"
+    android:backgroundTint="#E2DEF8"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="20dp"
+    android:padding="20dp">
+<LinearLayout
+    android:layout_width="match_parent"
+android:layout_gravity="center"
+    android:orientation="vertical"
+    android:layout_height="300dp"
+>
+    <EditText
+        android:id="@+id/editText1"
+        android:drawableStart="@drawable/time"
+        android:fontFamily="@font/med"
+        android:layout_margin="5dp"
+        android:padding="10dp"
+        android:background="@drawable/customedit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Arrival Time[hh-mm-ss]" />
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_margin="5dp"
+        android:drawableStart="@drawable/text"
+        android:fontFamily="@font/med"
+        android:padding="10dp"
+        android:background="@drawable/customedit"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Brief description" />
+
+    <Button
+        android:layout_margin="20dp"
+        android:id="@+id/submitButton"
+        android:fontFamily="@font/poppins_bold"
+        android:layout_width="200dp"
+        android:backgroundTint="@color/black"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_gravity="center"/>
+</LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

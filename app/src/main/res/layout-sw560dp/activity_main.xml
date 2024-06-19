@@ -190,10 +190,10 @@
         app:cardElevation="5dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.482"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.946">
+        app:layout_constraintVertical_bias="0.867">
 
         <TextView
             android:id="@+id/templogout"
@@ -304,7 +304,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007">
+        app:layout_constraintVertical_bias="0.0">
 
         <ImageView
             android:id="@+id/blood1"
