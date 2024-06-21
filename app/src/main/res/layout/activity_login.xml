@@ -37,23 +37,23 @@
         app:srcCompat="@drawable/img_9" />
 
     <androidx.cardview.widget.CardView
-        android:layout_width="370sp"
-        android:layout_height="300sp"
+        android:layout_width="362dp"
+        android:layout_height="296dp"
         app:cardCornerRadius="30sp"
         app:cardElevation="5sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.622">
+        app:layout_constraintVertical_bias="0.583">
 
         <EditText
             android:id="@+id/editTextText2"
             android:layout_width="350sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="40dp"
+            android:layout_marginTop="35dp"
             android:background="@drawable/customedit"
             android:drawableLeft="@drawable/person"
             android:drawablePadding="10sp"
@@ -63,37 +63,43 @@
             android:textSize="20sp"
             android:textStyle="normal" />
 
-
-        <EditText
-            android:id="@+id/mobile"
-            android:layout_width="250sp"
+        <LinearLayout
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="100dp"
-            android:background="@drawable/customedit"
-            android:drawableLeft="@drawable/phone"
-            android:drawablePadding="10sp"
-            android:hint="Mobile No."
-            android:inputType="phone"
-            android:maxLength="10"
-            android:layout_marginStart="50sp"
-            android:padding="10sp"
-            android:textSize="20sp"
-            android:textStyle="normal" />
+            android:layout_marginTop="110dp"
+            android:orientation="horizontal">
 
-        <com.hbb20.CountryCodePicker
-            android:id="@+id/ccp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="105sp"
-            app:ccp_textSize="15sp"
-            />
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/ccp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                app:ccp_textSize="15sp" />
+
+            <EditText
+                android:id="@+id/mobile"
+                android:layout_width="250sp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/customedit"
+                android:drawableLeft="@drawable/phone"
+                android:drawablePadding="10sp"
+                android:hint="Mobile No."
+                android:inputType="phone"
+                android:maxLength="11"
+                android:padding="10sp"
+                android:textSize="20sp"
+                android:textStyle="normal" />
+
+        </LinearLayout>
+
+
         <EditText
             android:id="@+id/editTextText5"
             android:layout_width="350sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="160dp"
+            android:layout_marginTop="180dp"
             android:background="@drawable/customedit"
             android:drawableLeft="@drawable/mail"
             android:drawablePadding="10sp"
@@ -108,7 +114,7 @@
             android:layout_width="200sp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal|bottom"
-            android:layout_marginBottom="20sp"
+            android:layout_marginBottom="5sp"
             android:text="Get OTP"
             android:textSize="17sp" />
     </androidx.cardview.widget.CardView>

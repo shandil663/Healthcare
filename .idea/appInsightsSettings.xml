@@ -9,9 +9,9 @@
               <option name="connection">
                 <ConnectionSetting>
                   <option name="appId" value="com.example.healthcare" />
-                  <option name="mobileSdkAppId" value="1:826364266675:android:4a069966c97ab598a708c6" />
-                  <option name="projectId" value="healthcare-d03ba" />
-                  <option name="projectNumber" value="826364266675" />
+                  <option name="mobileSdkAppId" value="1:279549053219:android:de896a5c38997ac9922496" />
+                  <option name="projectId" value="healersmain" />
+                  <option name="projectNumber" value="279549053219" />
                 </ConnectionSetting>
               </option>
               <option name="signal" value="SIGNAL_UNSPECIFIED" />

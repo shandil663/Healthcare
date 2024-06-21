@@ -81,7 +81,7 @@ blood.setOnClickListener(new View.OnClickListener() {
         meddata.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), medicalhistory.class));
+                startActivity(new Intent(getApplicationContext(), medicaldetails.class));
             }
         });
         viewappoint.setOnClickListener(new View.OnClickListener() {
