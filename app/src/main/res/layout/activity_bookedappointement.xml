@@ -159,7 +159,7 @@
         app:layout_constraintHorizontal_bias="0.526"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.945">
+        app:layout_constraintVertical_bias="0.838">
 
         <androidx.cardview.widget.CardView
             android:layout_width="390sp"
@@ -220,10 +220,10 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView15"
+                android:id="@+id/docidhere"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="105sp"
+                android:layout_marginStart="125sp"
                 android:layout_marginTop="68sp"
                 android:text="E45uD"
                 android:textColor="@color/black"
@@ -240,10 +240,10 @@
                 android:textSize="20sp" />
 
             <TextView
-                android:id="@+id/textView16"
+                android:id="@+id/sepciality"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="110sp"
+                android:layout_marginStart="130sp"
                 android:layout_marginTop="125sp"
                 android:text="Cardiologist"
                 android:textColor="@color/black"
