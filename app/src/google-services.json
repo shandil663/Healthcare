@@ -8,9 +8,9 @@
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:279549053219:android:de896a5c38997ac9922496",
+        "mobilesdk_app_id": "1:279549053219:android:2ece94147a28e467922496",
         "android_client_info": {
-          "package_name": "com.example.healthcare"
+          "package_name": "healers.data.solutions"
         }
       },
       "oauth_client": [],

@@ -6,15 +6,15 @@ plugins {
 }
 
 android {
-    namespace = "com.example.healthcare"
+    namespace = "healers.data.solutions"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.healthcare"
+        applicationId = "healers.data.solutions"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 3
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }

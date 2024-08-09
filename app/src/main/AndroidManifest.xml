@@ -18,43 +18,43 @@
         android:theme="@style/Theme.Healthcare"
         tools:targetApi="31">
         <activity
-            android:name=".medicaldetails"
+            android:name="healers.data.solutions.medicaldetails"
             android:exported="false" />
         <activity
-            android:name=".Blood"
+            android:name="healers.data.solutions.Blood"
             android:exported="false" />
         <activity
-            android:name=".cart"
+            android:name="healers.data.solutions.cart"
             android:exported="false" />
         <activity
-            android:name=".Medicinedetails"
+            android:name="healers.data.solutions.Medicinedetails"
             android:exported="false" />
         <activity
-            android:name=".Buydrugs"
+            android:name="healers.data.solutions.Buydrugs"
             android:exported="false" />
         <activity
-            android:name=".Emergency"
+            android:name="healers.data.solutions.Emergency"
             android:exported="false" />
         <activity
-            android:name=".NFC"
+            android:name="healers.data.solutions.NFC"
             android:exported="false" />
         <activity
-            android:name=".Cured"
+            android:name="healers.data.solutions.Cured"
             android:exported="false" />
         <activity
-            android:name=".testreports"
+            android:name="healers.data.solutions.testreports"
             android:exported="false" />
         <activity
-            android:name=".medicalhistory"
+            android:name="healers.data.solutions.medicalhistory"
             android:exported="false" />
         <activity
-            android:name=".settings"
+            android:name="healers.data.solutions.settings"
             android:exported="false" />
         <activity
-            android:name=".validation"
+            android:name="healers.data.solutions.validation"
             android:exported="false" />
         <activity
-            android:name=".Login"
+            android:name="healers.data.solutions.Login"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -63,13 +63,13 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".bookedappointement"
+            android:name="healers.data.solutions.bookedappointement"
             android:exported="false" />
         <activity
-            android:name=".appointmentbooking"
+            android:name="healers.data.solutions.appointmentbooking"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="healers.data.solutions.MainActivity"
             android:exported="false" />
     </application>
 
